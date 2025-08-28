@@ -1,0 +1,6 @@
+{
+  "name": "Dataform_tut",
+  "dependencies": {
+    "@dataform/core": "3.0.2"
+  }
+}
