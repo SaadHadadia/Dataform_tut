@@ -1,0 +1,62 @@
+config {
+    type: "table",
+    schema: "company_data",
+    name: "users",
+    dependencies: ["regions"],
+    description: "main users table"
+}
+
+WITH
+  user_data AS (
+  SELECT
+    1 AS user_id,
+    'john@example.com' AS email,
+    'John Doe' AS full_name,
+    1 AS region_id,
+    'active' AS status,
+    CURRENT_DATE() AS created_date
+  UNION ALL
+  SELECT
+    2 AS user_id,
+    'jane@example.com' AS email,
+    'Jane Smith' AS full_name,
+    2 AS region_id,
+    'active' AS status,
+    CURRENT_DATE() AS created_date
+  UNION ALL
+  SELECT
+    3 AS user_id,
+    'invalid-email' AS email,
+    'Bob Brown' AS full_name,
+    3 AS region_id,
+    'inactive' AS status,
+    CURRENT_DATE() AS created_date
+  UNION ALL
+  SELECT
+    4 AS user_id,
+    'sarah@example.com' AS email,
+    'Sarah Johnson' AS full_name,
+    NULL AS region_id,
+    'active' AS status,
+    CURRENT_DATE() AS created_date
+  UNION ALL
+  SELECT
+    5 AS user_id,
+    'mike@example.com' AS email,
+    'Mike Wilson' AS full_name,
+    1 AS region_id,
+    'inactive' AS status,
+    CURRENT_DATE() AS created_date )
+SELECT
+  u.user_id,
+  u.email,
+  u.full_name,
+  r.region_name,
+  u.status,
+  u.created_date
+FROM
+  user_data u
+LEFT JOIN
+  ${ref("regions")} r
+ON
+  u.region_id = r.region_id

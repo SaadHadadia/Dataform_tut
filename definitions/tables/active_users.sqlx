@@ -1,0 +1,17 @@
+config {
+    type: "table",
+    schema: "company_data",
+    name: "active_users",
+    description: "active users subset"
+}
+
+SELECT
+  user_id,
+  email,
+  full_name,
+  region_name,
+  created_date
+FROM
+  ${ref("users")}
+WHERE
+  status = 'active'

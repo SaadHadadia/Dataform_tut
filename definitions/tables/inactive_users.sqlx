@@ -1,0 +1,18 @@
+config {
+    type: "table",
+    schema: "company_data",
+    name: "inactive_users",
+    description: "inactive users subset"
+}
+
+SELECT
+  user_id,
+  email,
+  full_name,
+  region_name,
+  created_date,
+  'inactive' AS status_reason
+FROM
+  ${ref("users")}
+WHERE
+  status = 'inactive'

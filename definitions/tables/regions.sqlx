@@ -1,0 +1,22 @@
+config {
+    type: "table",
+    schema: "company_data",
+    name: "regions",
+    description: "company regions reference table"
+}
+
+SELECT
+  1 AS region_id,
+  'North America' AS region_name
+UNION ALL
+SELECT
+  2 AS region_id,
+  'Europe' AS region_name
+UNION ALL
+SELECT
+  3 AS region_id,
+  'Asia Pacific' AS region_name
+UNION ALL
+SELECT
+  4 AS region_id,
+  'South America' AS region_name
