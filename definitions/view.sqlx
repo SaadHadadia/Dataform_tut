@@ -1,8 +1,13 @@
 config {
-    type: "table",
-    name: "source",
-    description: "Description of the table",
-    tags: ["delete", "insert"],
+
+  type: "view",
+  name: "source",
+  assertions: {
+    uniqueKeys: [["fruit"]],    
+    rowConditions: [
+      "number > 0"
+    ]
+  }
 }
 
 SELECT
