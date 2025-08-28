@@ -1,13 +1,14 @@
 config {
-
-  type: "view",
-  name: "source",
-  assertions: {
-    uniqueKeys: [["fruit"]],    
-    rowConditions: [
-      "number > 0"
-    ]
-  }
+    type: "view",
+    name: "source",
+    assertions: {
+        uniqueKeys: [
+            ["fruit"]
+        ],
+        rowConditions: [
+            "number > 0"
+        ]
+    }
 }
 
 SELECT
