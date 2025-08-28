@@ -1,6 +1,8 @@
 config {
-    type: "view",
-    name: "source_view",
+    type: "table",
+    name: "source",
+    description: "Description of the table",
+    tags: ["delete", "insert"],
 }
 
 SELECT
