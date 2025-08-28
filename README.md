@@ -13,6 +13,7 @@ This repository is organized into branches that demonstrate different Dataform c
 1. [assertions](https://github.com/SaadHadadia/Dataform_tut/tree/05_assertions)
 1. [assertions dependencies](https://github.com/SaadHadadia/Dataform_tut/tree/06_assertions_dependencies)
 1. [documentation with js](https://github.com/SaadHadadia/Dataform_tut/tree/07_documentation_with_js)
+1. [release configuration](https://github.com/SaadHadadia/Dataform_tut/tree/08_release_configuration)
 
 ## Author
 * This repository was created and is maintained by [Saad Hadadia](https://github.com/SaadHadadia/)
