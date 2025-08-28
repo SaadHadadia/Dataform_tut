@@ -1,0 +1,11 @@
+config {
+    type: "operations",
+    tags: ["least_liked"],
+    dependencies: ["source"]
+}
+
+INSERT INTO dataform.source (fruit, number)
+VALUES ('water melon', 6);
+
+INSERT INTO dataform.source (fruit, number)
+VALUES ('avocado', 2);
