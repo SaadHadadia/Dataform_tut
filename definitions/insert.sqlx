@@ -1,6 +1,6 @@
 config {
     type: "operations",
-    tags: ["least_liked"],
+    tags: ["insert"],
     dependencies: ["source"]
 }
 
